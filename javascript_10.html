@@ -2,6 +2,15 @@
 <html>
 <head>
 	<script type="text/javascript">
+    console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
 	console.log(!!0); 
 	console.log(!!1); 
 	console.log(!!'string'); 
@@ -29,8 +38,46 @@
 	console.log(!!!{});
 	console.log(!!![]);
 	console.log(!!![1, 2, 3]);
+}}
 	</script>
 </head>
 <body>
+    <div>
+        <textarea cols = "100" rows="40">       
+	console.log(!!0); 
+	console.log(!!1); 
+	console.log(!!'string'); 
+	console.log(!!'true'); 
+	console.log(!!'false'); 
+	console.log(!!'');
+	console.log(!!true); 
+	console.log(!!false); 
+	console.log(!!null);
+	console.log(!!undefined);
+	console.log(!!{});
+	console.log(!![]);
+	console.log(!![1, 2, 3]);
+
+	console.log(!!!0);
+	console.log(!!!1);
+	console.log(!!!'string');
+	console.log(!!!'true');
+	console.log(!!!'false');
+	console.log(!!!'');
+	console.log(!!!true);
+	console.log(!!!false);
+	console.log(!!!null);
+	console.log(!!!undefined);
+	console.log(!!!{});
+	console.log(!!![]);
+	console.log(!!![1, 2, 3]);
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
 </body>
 </html>
