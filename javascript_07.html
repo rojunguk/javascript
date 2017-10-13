@@ -17,5 +17,27 @@
 	</script>
 </head>
 <body>
+    <div>
+        <textarea cols = "100" rows="40">       
+	var a = 10;
+	var b = 10;
+	var c = "10";
+
+	console.log(a == b); 
+	console.log(a == c); 
+
+	console.log(a === b); 
+	console.log(a === c); 
+
+	console.log(a == b && typeof (a) == typeof (b));
+	console.log(a == c && typeof (a) == typeof (c));
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
 </body>
 </html>

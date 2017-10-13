@@ -15,5 +15,25 @@
 	</script>
 </head>
 <body>
+    <div>
+        <textarea cols = "100" rows="40">       
+	var a = parseFloat("10");
+	var b = parseFloat("10.3");
+	var c = parseFloat("10 20 30");
+	var d = parseFloat("10 years");
+	var e = parseFloat("years 10");
+	console.log(typeof(a) + " : " + a);
+	console.log(typeof(b) + " : " + b);
+	console.log(typeof(c) + " : " + c);
+	console.log(typeof(d) + " : " + d);
+	console.log(typeof(e) + " : " + e);         
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>    
 </body>
 </html>
